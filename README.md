@@ -33,15 +33,13 @@ This project contains information about how to set up ELK (Elastic search, Log s
         path => "<your path here>/logs/app.log"
     }
 }
-
 output {
     elasticsearch{
         hosts => ["localhost:9200"]
         index => "<your application index here>"
     }
-}
-   
-   ```
+}  
+  ```
  - There are usually 3 sections in the logstash.conf file viz - Input, Putput and filter. ( Filter is optional
    however input and output is mandatory.
  - In the input we need to specify the log files path where our application writes the logs.
